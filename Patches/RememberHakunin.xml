@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Add Name attribute to Broc Flower wild plant for inheritance -->
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="FCP_Plant_Broc_Flower"]</xpath>
+    <attribute>Name</attribute>
+    <value>FCP_Plant_Broc_Flower</value>
+  </Operation>
+
+  <!-- Add Name attribute to Xander Root wild plant for inheritance -->
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="FCP_Plant_Xander_Root"]</xpath>
+    <attribute>Name</attribute>
+    <value>FCP_Plant_Xander_Root</value>
+  </Operation>
+</Patch>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Sowable Broc Flower -->
+  <ThingDef ParentName="FCP_Plant_Broc_Flower">
+    <defName>FCP_Plant_Broc_Flower_Sowable</defName>
+    <label>broc flower plant</label>
+    <plant>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <sowResearchPrerequisites>
+        <li>FCP_Research_BrocXander_Refinement</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <!-- Sowable Xander Root -->
+  <ThingDef ParentName="FCP_Plant_Xander_Root">
+    <defName>FCP_Plant_Xander_Root_Sowable</defName>
+    <label>xander root plant</label>
+    <plant>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <sowResearchPrerequisites>
+        <li>FCP_Research_BrocXander_Refinement</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+</Defs>

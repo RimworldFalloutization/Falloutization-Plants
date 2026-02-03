@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Remove Cocoa research project -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ResearchProjectDef[defName="Cocoa"]</xpath>
+  </Operation>
+
+  <!-- Remove Cocoa research prerequisite from Plant_TreeCocoa -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_TreeCocoa"]/plant/sowResearchPrerequisites</xpath>
+    <value>
+      <sowResearchPrerequisites Inherit="False" />
+    </value>
+  </Operation>
+
+  <!-- Remove Honey Mesquite Sowing research project -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Honey_Mesquite_Sowing"]</xpath>
+  </Operation>
+
+  <!-- Remove Lab Grown Produce research project -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Lab_Grown_Produce"]</xpath>
+  </Operation>
+
+  <!-- Remove Spore Creation research project -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Spore_Creation"]</xpath>
+  </Operation>
+
+  <!-- Remove Spore Carrier Program research project -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Spore_Carrier_Program"]</xpath>
+  </Operation>
+</Patch>

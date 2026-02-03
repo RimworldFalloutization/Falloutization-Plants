@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Add FCP Basic Agriculture research prerequisite to vanilla plants -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Haygrass"]/plant</xpath>
+    <value>
+      <sowResearchPrerequisites>
+        <li>FCP_Research_Basic_Agriculture</li>
+      </sowResearchPrerequisites>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Potato"]/plant</xpath>
+    <value>
+      <sowResearchPrerequisites>
+        <li>FCP_Research_Basic_Agriculture</li>
+      </sowResearchPrerequisites>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Healroot"]/plant</xpath>
+    <value>
+      <sowResearchPrerequisites>
+        <li>FCP_Research_Basic_Agriculture</li>
+      </sowResearchPrerequisites>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Cotton"]/plant</xpath>
+    <value>
+      <sowResearchPrerequisites>
+        <li>FCP_Research_Basic_Agriculture</li>
+      </sowResearchPrerequisites>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Hops"]/plant</xpath>
+    <value>
+      <sowResearchPrerequisites>
+        <li>FCP_Research_Basic_Agriculture</li>
+      </sowResearchPrerequisites>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Smokeleaf"]/plant</xpath>
+    <value>
+      <sowResearchPrerequisites>
+        <li>FCP_Research_Basic_Agriculture</li>
+      </sowResearchPrerequisites>
+    </value>
+  </Operation>
+
+  <!-- Remove research prerequisites from wild variants (they inherit from cultivated versions) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Cotton_Wild"]/plant</xpath>
+    <value>
+      <sowResearchPrerequisites Inherit="False" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Smokeleaf_Wild"]/plant</xpath>
+    <value>
+      <sowResearchPrerequisites Inherit="False" />
+    </value>
+  </Operation>
+
+  <!-- Rename Nutrifungus to Cave Fungus -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_Nutrifungus"]/label</xpath>
+    <value>
+      <label>cave fungus</label>
+    </value>
+  </Operation>
+
+  <!-- Add Mushroom Farming research prerequisite to Cave Fungus -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Nutrifungus"]/plant</xpath>
+    <value>
+      <sowResearchPrerequisites>
+        <li>FCP_Research_Mushroom_Farming</li>
+      </sowResearchPrerequisites>
+    </value>
+  </Operation>
+</Patch>

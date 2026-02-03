@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <packageId>Falloutization.Plants</packageId>
+    <author>Canenald</author>
+    <name>Falloutization: Plants</name>
+    <description>A mod that merges Vanilla plants and FCP - Plants to create a plausible Fallout experience.</description>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>Rick.FCP.Plants</packageId>
+            <displayName>FCP - Plants</displayName>
+            <downloadUrl>https://github.com/FalloutCollaborationProject/FCP-Plants</downloadUrl>
+        </li>
+        <li>
+            <packageId>Rick.FCP.Core.Tools</packageId>
+            <displayName>FCP - Tools</displayName>
+            <downloadUrl>https://github.com/FalloutCollaborationProject/FCP-Tools</downloadUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Rick.FCP.Plants</li>
+        <li>Rick.FCP.Core.Tools</li>
+    </loadAfter>
+    <modVersion>1.0</modVersion>
+</ModMetaData>

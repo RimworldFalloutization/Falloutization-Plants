@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Farming</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- Change VFE Planter Box to require Advanced Agriculture research -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="VFE_PlanterBox"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>FCP_Research_Advanced_Agriculture</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <!-- Change VFE Tilable Planter Box to require Advanced Agriculture research -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="VFE_PlanterBox_Tilable"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>FCP_Research_Advanced_Agriculture</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <!-- Add Advanced Agriculture as prerequisite for Hydroponics research -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ResearchProjectDef[defName="Hydroponics"]/prerequisites</xpath>
+          <value>
+            <li>FCP_Research_Advanced_Agriculture</li>
+          </value>
+        </li>
+        <!-- Replace scarecrow prerequisite with Advanced Agriculture -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_Scarecrow"]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>FCP_Research_Advanced_Agriculture</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <!-- Remove VFE Farming Techniques research project -->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ResearchProjectDef[defName="VFE_Res_FarmingTechniques"]</xpath>
+        </li>
+        <!-- Replace VFE Sprinkler prerequisite with Advanced Agriculture -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_Sprinkler"]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>FCP_Research_Advanced_Agriculture</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <!-- Remove VFE Sprinkler research project -->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ResearchProjectDef[defName="VFE_Res_Sprinkler"]</xpath>
+        </li>
+        <!-- Replace Advanced Agriculture research cost with 1500 -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Advanced_Agriculture"]/baseCost</xpath>
+          <value>
+            <baseCost>1500</baseCost>
+          </value>
+        </li>
+      </operations>
+    </match>
+    <nomatch Class="PatchOperationRemove">
+      <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Advanced_Agriculture"]</xpath>
+    </nomatch>
+  </Operation>
+</Patch>
