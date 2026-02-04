@@ -50,8 +50,17 @@
     </value>
   </Operation>
 
-  <Operation Class="PatchOperationAdd">
+  <!-- Make Toxipotato not sowable (Biotech DLC) -->
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
     <xpath>Defs/ThingDef[defName="Plant_Toxipotato"]/plant</xpath>
+    <value>
+      <sowTags Inherit="False" />
+    </value>
+  </Operation>
+
+  <!-- Make Fibercorn not sowable -->
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Ideology">
+    <xpath>Defs/ThingDef[defName="Plant_Fibercorn"]/plant/sowTags</xpath>
     <value>
       <sowTags Inherit="False" />
     </value>
@@ -97,11 +106,22 @@
     </value>
   </Operation>
 
-  <!-- Remove Toxipotato from all categories -->
-  <Operation Class="PatchOperationAdd">
+  <!-- Remove Toxipotato from all categories) -->
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
     <xpath>Defs/ThingDef[defName="RawToxipotato"]</xpath>
     <value>
       <thingCategories Inherit="False" />
     </value>
+  </Operation>
+
+  <!-- Remove Chocolate from trader stock generators -->
+  <!-- Remove Chocolate from StockGenerator_SingleDef -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/TraderKindDef/stockGenerators/li[@Class='StockGenerator_SingleDef' and thingDef='Chocolate']</xpath>
+  </Operation>
+  
+  <!-- Remove Chocolate from StockGenerator_MultiDef thingDefs lists -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/TraderKindDef/stockGenerators/li[@Class='StockGenerator_MultiDef']/thingDefs/li[text()='Chocolate']</xpath>
   </Operation>
 </Patch>

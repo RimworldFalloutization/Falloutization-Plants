@@ -5,12 +5,9 @@
     <xpath>Defs/ResearchProjectDef[defName="Cocoa"]</xpath>
   </Operation>
 
-  <!-- Remove Cocoa research prerequisite from Plant_TreeCocoa -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Plant_TreeCocoa"]/plant/sowResearchPrerequisites</xpath>
-    <value>
-      <sowResearchPrerequisites Inherit="False" />
-    </value>
+  <!-- Remove Devilstrand research project -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]</xpath>
   </Operation>
 
   <!-- Remove Honey Mesquite Sowing research project -->
