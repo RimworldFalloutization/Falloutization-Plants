@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Prevent chocolate from spawning in resource pods -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName='Chocolate']</xpath>
+    <value><preventSpawningInResourcePod>true</preventSpawningInResourcePod></value>
+  </Operation>
+</Patch>
