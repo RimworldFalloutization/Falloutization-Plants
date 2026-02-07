@@ -98,7 +98,11 @@
     </value>
   </Operation>
 
-  <!-- Remove Devilstrand from all categories -->
+  <!-- Remove Devilstrand from all categories and as usable stuff -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DevilstrandCloth"]/stuffProps</xpath>
+    <value><stuffProps Inherit="False" /></value>
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="DevilstrandCloth"]</xpath>
     <value>
