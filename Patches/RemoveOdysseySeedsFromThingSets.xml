@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Rare fishing catches: replace the seed-only option with GauranlenSeed (or remove option if missing). -->
+  <Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="GauranlenSeed"]</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingSetMakerDef[@Name="RareFishingCatchesBase"]/root/options/li[thingSetMaker/fixedParams/filter/thingDefs/li="ArcheanSeed"]/thingSetMaker/fixedParams/filter/thingDefs</xpath>
+      <value>
+        <thingDefs>
+          <li>GauranlenSeed</li>
+        </thingDefs>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationRemove">
+      <xpath>Defs/ThingSetMakerDef[@Name="RareFishingCatchesBase"]/root/options/li[thingSetMaker/fixedParams/filter/thingDefs/li="ArcheanSeed"]</xpath>
+    </nomatch>
+  </Operation>
+
+  <!-- MapGen_ScarlandsHermeticCrate: replace the seed-only option with GauranlenSeed (or remove option if missing). -->
+  <Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="GauranlenSeed"]</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingSetMakerDef[defName="MapGen_ScarlandsHermeticCrate"]/root/options/li[thingSetMaker/fixedParams/filter/thingDefs/li="ArcheanSeed"]/thingSetMaker/fixedParams/filter/thingDefs</xpath>
+      <value>
+        <thingDefs>
+          <li>GauranlenSeed</li>
+        </thingDefs>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationRemove">
+      <xpath>Defs/ThingSetMakerDef[defName="MapGen_ScarlandsHermeticCrate"]/root/options/li[thingSetMaker/fixedParams/filter/thingDefs/li="ArcheanSeed"]</xpath>
+    </nomatch>
+  </Operation>
+
+  <!-- MapGen_HighValueCrate: replace the seed-only option with GauranlenSeed (or remove option if missing). -->
+  <Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="GauranlenSeed"]</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingSetMakerDef[defName="MapGen_HighValueCrate"]/root/options/li[thingSetMaker/fixedParams/filter/thingDefs/li="ArcheanSeed"]/thingSetMaker/fixedParams/filter/thingDefs</xpath>
+      <value>
+        <thingDefs>
+          <li>GauranlenSeed</li>
+        </thingDefs>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationRemove">
+      <xpath>Defs/ThingSetMakerDef[defName="MapGen_HighValueCrate"]/root/options/li[thingSetMaker/fixedParams/filter/thingDefs/li="ArcheanSeed"]</xpath>
+    </nomatch>
+  </Operation>
+
+  <!-- Reward_AncientSafe: replace the seed-only option with GauranlenSeed (or remove option if missing). -->
+  <Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="GauranlenSeed"]</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingSetMakerDef[defName="Reward_AncientSafe"]/root/options/li[thingSetMaker/fixedParams/filter/thingDefs/li="ArcheanSeed"]/thingSetMaker/fixedParams/filter/thingDefs</xpath>
+      <value>
+        <thingDefs>
+          <li>GauranlenSeed</li>
+        </thingDefs>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationRemove">
+      <xpath>Defs/ThingSetMakerDef[defName="Reward_AncientSafe"]/root/options/li[thingSetMaker/fixedParams/filter/thingDefs/li="ArcheanSeed"]</xpath>
+    </nomatch>
+  </Operation>
+
+  <!-- Reward_ArcheanSeed: the def is seed-only; replace to GauranlenSeed (or remove the def if missing). -->
+  <Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="GauranlenSeed"]</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingSetMakerDef[defName="Reward_ArcheanSeed"]//thingDefs</xpath>
+      <value>
+        <thingDefs>
+          <li>GauranlenSeed</li>
+        </thingDefs>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationRemove">
+      <xpath>Defs/ThingSetMakerDef[defName="Reward_ArcheanSeed"]</xpath>
+    </nomatch>
+  </Operation>
+</Patch>
+
