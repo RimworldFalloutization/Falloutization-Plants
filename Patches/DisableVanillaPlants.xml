@@ -37,6 +37,12 @@
     <xpath>Defs/ThingDef[defName="Plant_TreeCocoa"]/plant/sowResearchPrerequisites</xpath>
   </Operation>
 
+  <!-- Prevent Devilstrand from spawning in resource pods -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plant_Devilstrand"]</xpath>
+    <value><preventSpawningInResourcePod>true</preventSpawningInResourcePod></value>
+  </Operation>
+
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Plant_Psychoid"]/plant/sowTags</xpath>
     <value>
