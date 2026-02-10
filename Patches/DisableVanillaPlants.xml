@@ -39,7 +39,7 @@
 
   <!-- Prevent Devilstrand from spawning in resource pods -->
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="Plant_Devilstrand"]</xpath>
+    <xpath>Defs/ThingDef[defName="DevilstrandCloth"]</xpath>
     <value><preventSpawningInResourcePod>true</preventSpawningInResourcePod></value>
   </Operation>
 
