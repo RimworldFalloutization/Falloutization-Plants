@@ -29,4 +29,9 @@
   <Operation Class="PatchOperationRemove">
     <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Spore_Carrier_Program"]</xpath>
   </Operation>
+
+  <!-- Remove Culinary Creations research project -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Culinary_Creation"]</xpath>
+  </Operation>
 </Patch>
