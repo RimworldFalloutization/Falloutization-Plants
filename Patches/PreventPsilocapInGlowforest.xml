@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch MayRequire="Ludeon.RimWorld.Odyssey">
   <!-- Psilocap plant only spawns in Glowforest (Odyssey). Remove it from wild plants there. -->
-  <Operation Class="PatchOperationRemove">
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Odyssey</li>
+    </mods>
+    <match Class="PatchOperationRemove">
     <xpath>Defs/BiomeDef[defName='Glowforest']/wildPlants/Plant_Psilocap</xpath>
+    </match>
   </Operation>
 </Patch>
