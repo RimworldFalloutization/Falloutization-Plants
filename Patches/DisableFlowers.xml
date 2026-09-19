@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- vanilla -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_Dandelion"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_Daylily"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_Rose"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <!-- Vanilla Landmarks Expanded -->
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VExplorationE">
+    <xpath>Defs/ThingDef[defName="VEE_Plant_MysticCap"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VExplorationE">
+    <xpath>Defs/ThingDef[defName="VEE_ButtercupFlower"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VExplorationE">
+    <xpath>Defs/ThingDef[defName="VEE_ForgetMeNot"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <!-- Vanilla Events Expanded -->
+  <Operation Class="PatchOperationAdd" MayRequire="VanillaExpanded.VEE">
+    <xpath>Defs/ThingDef[@ParentName="VEE_Flower"]/plant</xpath>
+    <value>
+      <sowTags Inherit="False" />
+    </value>
+  </Operation>
+</Patch>

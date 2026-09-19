@@ -22,3 +22,8 @@
 - FCP plant research projects that don't unlock anything
 - Gauranlen Seed
 - Faming Techniques research project (Vanilla Furniture Expanded - Farming)
+- all vanilla flowers
+- all Vanilla Landmarks Expanded flowers
+- all Vanila Events Expanded flowers
+- Coffee plant, Tea plant, Tobacco plant (Vanilla Brewing Expanded)
+- Chemroot (Vanilla Factions Expanded - Settlers)

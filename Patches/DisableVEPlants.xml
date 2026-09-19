@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Vanilla Brewing Expanded -->
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBrewE">
+    <xpath>Defs/ThingDef[defName="VBE_Plant_Coffee"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBrewE">
+    <xpath>Defs/ThingDef[defName="VBE_Plant_Tea"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBrewE">
+    <xpath>Defs/ThingDef[defName="VBE_Plant_Tobacco"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <!-- Vanilla Factions Expanded - Settlers -->
+  <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VanillaFactionsExpanded.SettlersModule">
+    <xpath>Defs/ThingDef[defName="Plant_Chemroot"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+</Patch>

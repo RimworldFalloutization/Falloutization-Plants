@@ -20,14 +20,14 @@
     <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Lab_Grown_Produce"]</xpath>
   </Operation>
 
+  <!-- Remove Spore Creation prerequisite from Spore Carrier Program -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Spore_Carrier_Program"]/prerequisites/li[.="FCP_Research_Spore_Creation"]</xpath>
+  </Operation>
+
   <!-- Remove Spore Creation research project -->
   <Operation Class="PatchOperationRemove">
     <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Spore_Creation"]</xpath>
-  </Operation>
-
-  <!-- Remove Spore Carrier Program research project -->
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/ResearchProjectDef[defName="FCP_Research_Spore_Carrier_Program"]</xpath>
   </Operation>
 
   <!-- Remove Culinary Creations research project -->
