@@ -30,7 +30,7 @@
     </value>
   </Operation>
 
-  <!-- Vanilla Factions Expanded - Medieval 2 (makes Astragalus sowable + harvestable) -->
+  <!-- Vanilla Factions Expanded - Medieval 2 (makes these sowable + harvestable for alchemy) -->
   <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
     <xpath>Defs/ThingDef[defName="Plant_Astragalus"]/plant/sowTags</xpath>
     <value>
@@ -44,6 +44,82 @@
 
   <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
     <xpath>Defs/ThingDef[defName="VFEM2_AstragalusFlowers"]/thingCategories</xpath>
+    <value>
+      <thingCategories Inherit="False" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="Plant_Rafflesia"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="Plant_Rafflesia"]/plant/sowResearchPrerequisites</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="VFEM2_RafflesiaLeaves"]/thingCategories</xpath>
+    <value>
+      <thingCategories Inherit="False" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="Plant_Clivia"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="Plant_Clivia"]/plant/sowResearchPrerequisites</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="VFEM2_CliviaPetals"]/thingCategories</xpath>
+    <value>
+      <thingCategories Inherit="False" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="Plant_Alocasia"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="Plant_Alocasia"]/plant/sowResearchPrerequisites</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="VFEM2_AlocasiaLeaves"]/thingCategories</xpath>
+    <value>
+      <thingCategories Inherit="False" />
+    </value>
+  </Operation>
+
+  <!-- Prevent wild spawning in biomes -->
+  <Operation Class="PatchOperationRemove" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/BiomeDef/wildPlants/Plant_Astragalus</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/BiomeDef/wildPlants/Plant_Rafflesia</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/BiomeDef/wildPlants/Plant_Clivia</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/BiomeDef/wildPlants/Plant_Alocasia</xpath>
+  </Operation>
+
+  <!-- Vanilla Landmarks Expanded -->
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VExplorationE">
+    <xpath>Defs/ThingDef[defName="VEE_AnimaPearls"]/thingCategories</xpath>
     <value>
       <thingCategories Inherit="False" />
     </value>
