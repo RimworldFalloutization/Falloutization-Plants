@@ -28,3 +28,4 @@
 - Coffee plant, Tea plant, Tobacco plant (Vanilla Brewing Expanded)
 - Chemroot (Vanilla Factions Expanded - Settlers)
 - Astragalus, Rafflesia, Clivia, Alocasia if Vanilla Factions Expanded - Medieval 2 is loaded
+- Anima Pearls

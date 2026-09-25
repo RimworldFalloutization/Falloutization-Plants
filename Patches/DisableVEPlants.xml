@@ -117,11 +117,34 @@
     <xpath>Defs/BiomeDef/wildPlants/Plant_Alocasia</xpath>
   </Operation>
 
-  <!-- Vanilla Landmarks Expanded -->
+  <!-- Vanilla Landmarks Expanded: anima pearls use MealFine preferability, so
+       MapGen_DefaultStockpile (Distress Signal / settlement camp loot) picks them
+       via ThingSetMaker_RandomGeneralGoods.RandomMeals even without categories. -->
   <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VExplorationE">
     <xpath>Defs/ThingDef[defName="VEE_AnimaPearls"]/thingCategories</xpath>
     <value>
       <thingCategories Inherit="False" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VExplorationE">
+    <xpath>Defs/ThingDef[defName="VEE_AnimaPearls"]/ingestible/preferability</xpath>
+    <value>
+      <preferability>NeverForNutrition</preferability>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd" MayRequire="VanillaExpanded.VExplorationE">
+    <xpath>Defs/ThingDef[defName="VEE_AnimaPearls"]</xpath>
+    <value>
+      <preventSpawningInResourcePod>true</preventSpawningInResourcePod>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd" MayRequire="VanillaExpanded.VExplorationE">
+    <xpath>Defs/ThingSetMakerDef[defName="MapGen_DefaultStockpile"]/root/options/li/thingSetMaker[@Class="ThingSetMaker_RandomOption"]/options/li[thingSetMaker/fixedParams/filter/categories/li="ResourcesRaw"]/thingSetMaker/fixedParams/filter/disallowedThingDefs</xpath>
+    <value>
+      <li>VEE_AnimaPearls</li>
     </value>
   </Operation>
 </Patch>

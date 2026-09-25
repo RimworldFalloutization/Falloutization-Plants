@@ -30,6 +30,7 @@
         <li>Rick.FCP.Core.Tools</li>
         <li>VanillaExpanded.VFEFarming</li>
         <li>OskarPotocki.VFE.Medieval2</li>
+        <li>VanillaExpanded.VExplorationE</li>
     </loadAfter>
     <modVersion>1.0</modVersion>
 </ModMetaData>
