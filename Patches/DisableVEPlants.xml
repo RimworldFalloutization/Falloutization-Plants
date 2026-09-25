@@ -29,4 +29,23 @@
       <sowTags />
     </value>
   </Operation>
+
+  <!-- Vanilla Factions Expanded - Medieval 2 (makes Astragalus sowable + harvestable) -->
+  <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="Plant_Astragalus"]/plant/sowTags</xpath>
+    <value>
+      <sowTags />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="Plant_Astragalus"]/plant/sowResearchPrerequisites</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Medieval2">
+    <xpath>Defs/ThingDef[defName="VFEM2_AstragalusFlowers"]/thingCategories</xpath>
+    <value>
+      <thingCategories Inherit="False" />
+    </value>
+  </Operation>
 </Patch>

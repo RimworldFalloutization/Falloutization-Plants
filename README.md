@@ -27,3 +27,4 @@
 - all Vanila Events Expanded flowers
 - Coffee plant, Tea plant, Tobacco plant (Vanilla Brewing Expanded)
 - Chemroot (Vanilla Factions Expanded - Settlers)
+- Astragalus (Vanilla Factions Expanded - Medieval 2)
